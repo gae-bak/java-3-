@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class IntegerFilter {
+public class GenericFilter {
 
-    public static List<Integer> filter(List<Integer> list, Predicate<Integer> predicate) {
-        ArrayList<Integer> filtered = new ArrayList<>();
-        for (Integer num : list) {
+    public static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
+        ArrayList<T> filtered = new ArrayList<>();
+        for (T num : list) {
             if (predicate.test(num)) {
                 filtered.add(num);
             }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class FilterExam {
+public class FilterMainV3 {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         // 짝수만 거르기
@@ -18,8 +18,7 @@ public class FilterExam {
     static List<Integer> filterNumber(List<Integer> numbers, Predicate<Integer> predicate) {
         List<Integer> filtered = new ArrayList<>();
         for (Integer number : numbers) {
-            boolean result = predicate.test(number);
-            if (result) {
+            if (predicate.test(number)) {
                 filtered.add(number);
             }
         }
