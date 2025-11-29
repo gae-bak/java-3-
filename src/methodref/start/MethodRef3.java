@@ -15,13 +15,13 @@ public class MethodRef3 {
         // 람다
         Function<Person, String> fun1 = (Person p) -> p.introduce();
         System.out.println("person1.introduce = " + fun1.apply(person1));
-        System.out.println("person1.introduce = " + fun1.apply(person1));
-        System.out.println("person1.introduce = " + fun1.apply(person1));
+        System.out.println("person1.introduce = " + fun1.apply(person2));
+        System.out.println("person1.introduce = " + fun1.apply(person3));
 
         // 메서드 참조, 타입이 첫 번째 매개변수가 됨, 그리고 첫 번째 매개변수의 메서드를 호출, 나머지는 순서대로 매개변수에 전달
-        Function<Person, String> fun2 = Person::introduce;
-        System.out.println("person1.introduce = " + fun2.apply(person1));
-        System.out.println("person1.introduce = " + fun2.apply(person2));
-        System.out.println("person1.introduce = " + fun2.apply(person3));
+        Function<Person, String> fun2 = Person::introduce; // 타입::인스턴스 메서드
+        System.out.println("person2.introduce = " + fun2.apply(person1));
+        System.out.println("person2.introduce = " + fun2.apply(person2));
+        System.out.println("person2.introduce = " + fun2.apply(person3));
     }
 }
