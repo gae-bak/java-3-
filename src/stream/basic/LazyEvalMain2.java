@@ -15,8 +15,9 @@ public class LazyEvalMain2 {
     private static void ex2(List<Integer> data) {
         System.out.println("=== 스트림 api 시작 ===");
 
-    data.stream().filter(i -> {
+        data.stream().filter(i -> {
                     boolean isEven = i % 2 == 0;
+                    System.out.println("i = " + i + ", isEven = " + isEven);
                     return isEven;
                 })
                 .map(i -> {
@@ -31,6 +32,7 @@ public class LazyEvalMain2 {
         MyStreamV3.of(data)
                 .filter(i -> {
                     boolean isEven = i % 2 == 0;
+                    System.out.println("i = " + i + ", isEven = " + isEven);
                     return isEven;
                 })
                 .map(i -> {
