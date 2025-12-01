@@ -1,5 +1,7 @@
 package lambda.lambda5.mystream;
 
+import lambda.MyFunction;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
@@ -15,6 +17,7 @@ public class MyStreamV3<T> {
     }
 
     // static factory(정적 팩토리 패턴)
+    // 제네릭 메서드
     public static <T> MyStreamV3<T> of(List<T> internalList) {
         return new MyStreamV3<>(internalList);
     }
@@ -29,6 +32,9 @@ public class MyStreamV3<T> {
         return MyStreamV3.of(filtered);
     }
     // T -> student R -> String
+    // static?
+    // 제네릭 메서드
+    // 간결하게
     public <R> MyStreamV3<R> map(Function<T, R> mapper) {
         List<R> mapped = new ArrayList<>();
         for (T element : internalList) {
