@@ -2,7 +2,7 @@ package stream.operation;
 
 import java.util.Optional;
 
-public class OptionalSImpleMain {
+public class OptionalSimpleMain {
     public static void main(String[] args) {
         Optional<Integer> optional1 = Optional.of(10);
 

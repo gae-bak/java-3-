@@ -13,7 +13,6 @@ public class LogMain3 {
     static int value100() {
         System.out.println("value 100 호출");
         return 100;
-
     }
 
     static int value200() {
